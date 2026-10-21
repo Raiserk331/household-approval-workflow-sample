@@ -1,0 +1,29 @@
+{
+  "tested_python": "3.14",
+  "unit_tests_passed": 7,
+  "independent_checks_passed": 14,
+  "independent_actual_cli_processes": 13,
+  "source_sha256": "dfb5ee7031640c777225ad8ae7edcb964a94f01806bf680b9becdd944b64993a",
+  "checks": [
+    "ingest_creates_pending",
+    "fresh_process_reopens_exact_payload",
+    "pending_cannot_export",
+    "wrong_digest_cannot_approve",
+    "correct_digest_approves",
+    "same_id_conflict_rejected",
+    "conflict_preserves_original_approval",
+    "stop_after_approval_blocks_actual_write",
+    "approved_export_is_draft_file",
+    "export_plain_text_newline",
+    "repeat_export_idempotent",
+    "existing_conflicting_file_not_overwritten",
+    "payload_tamper_blocked",
+    "payload_and_digest_tamper_cannot_reuse_approval"
+  ],
+  "scope": "Synthetic local draft workflow only; no network, model, email, calendar, n8n or production integration",
+  "untested": [
+    "concurrent races",
+    "sudden power loss",
+    "authenticated owner approval"
+  ]
+}
